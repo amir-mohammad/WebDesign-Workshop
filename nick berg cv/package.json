@@ -1,0 +1,21 @@
+{
+  "name": "Nick-Berg",
+  "version": "1.0.0",
+  "description": "a pack for bootstrap project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "amirm azaarbashi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "jquery": "^3.3.1",
+    "tether": "^1.4.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}

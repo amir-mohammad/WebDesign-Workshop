@@ -1,0 +1,83 @@
+@mixin MontserratStyle($color,$size,$height,$spacing,$weight) {
+    
+    font-family: 'Montserrat', sans-serif;
+    color:$color;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+    font-weight: $weight;
+}
+@mixin openSansStyle($color,$size,$height,$spacing,$weight) {
+    font-family: 'Open Sans', sans-serif;
+    color:$color;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+    font-weight: $weight;
+}
+
+@mixin lgBreakpoint {
+    @media screen and(min-width:992px) {
+        @content;
+    }
+}
+@mixin mdBreakpoint {
+    @media screen and(min-width:768px) {
+        @content;
+    }
+}
+@mixin smBreakpoint {
+    @media screen and(min-width:576px) {
+        @content;
+    }
+}
+
+@mixin btnStyle {
+    background-color:$baseColor;
+    border-radius: 5px;
+   
+}
+@mixin underlineSymbol($width,$height) {
+       display:inline-block;
+       width:$width;
+       height: $height; 
+       background:$baseColor;
+}
+
+@mixin configRow {
+    .row{
+        width:100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@mixin  servicesInfo($length,$selector) {
+    @for $i from 1 through $length{
+        #{$selector}:nth-of-type(#{$i}){
+            @if $i % 2 == 0{
+
+            }@else{
+                background: $serviceBg;
+            }
+            text-align: center;
+            @include lgBreakpoint(){
+                text-align: left;
+                @if $i == 1{
+                    border-bottom: 1px dashed $dashBorder;
+                }@else if $i == 2{
+                    border-bottom: 1px dashed $dashBorder;
+                    border-left: 1px solid $dashBorder;
+                    border-right: 1px solid $dashBorder;
+                }@else if $i == 3{
+                    border-bottom: 1px dashed $dashBorder;
+                }@else if $i == 5{
+                    border-left: 1px solid $dashBorder;
+                    border-right: 1px solid $dashBorder;
+                }
+            }
+        }
+    }
+}
+
+
